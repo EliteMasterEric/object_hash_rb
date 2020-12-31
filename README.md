@@ -2,7 +2,9 @@
 
 Generate cryptographic hashes from objects and values in Ruby. Supports SHA1 and many others.
 
-Built generate hashes compatible with [object-hash](https://github.com/puleos/object-hash) for NodeJS.
+The library aims to support hashing of objects such as circular object structures, allowing for simplified deep equality checks.
+
+Built to generate cryptographic hashes which are compatible with [object-hash](https://github.com/puleos/object-hash) for NodeJS.
 
 [![Travis CI](https://secure.travis-ci.org/MasterEric/object-hash.png?branch=master)](https://secure.travis-ci.org/MasterEric/object-hash?branch=master)
 [![Coverage Status](https://coveralls.io/repos/MasterEric/object-hash/badge.svg?branch=master&service=github)](https://coveralls.io/github/MasterEric/object-hash?branch=master)

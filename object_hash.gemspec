@@ -10,14 +10,12 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "Generate cryptographic hashes from objects and values."
   spec.description   = "Generate cryptographic hashes from objects and values in Ruby."\
-    " Produces hashes compatible with `object-hash` for JavaScript."
+    "Built for compatibility with `object-hash` for JavaScript."
   spec.homepage      = "https://github.com/MasterEric/object_hash"
   spec.license       = "MIT"
 
-  # TODO: This could probably be lower.
-  spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
-
-  spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
+  # TODO: Should this be set lower to increase compatibility?
+  spec.required_ruby_version = Gem::Requirement.new(">= 2.4.0")
 
   spec.metadata["homepage_uri"] = "https://github.com/MasterEric/object_hash"
   spec.metadata["source_code_uri"] = "https://github.com/MasterEric/object_hash"
