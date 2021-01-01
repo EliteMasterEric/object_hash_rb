@@ -1,4 +1,4 @@
-# ObjectHash for Ruby
+# object_hash_rb
 
 Generate cryptographic hashes from objects and values in Ruby. Supports SHA1 and many others.
 
@@ -6,16 +6,16 @@ The library aims to support hashing of objects such as circular object structure
 
 Built to generate cryptographic hashes which are compatible with [object-hash](https://github.com/puleos/object-hash) for NodeJS.
 
-[![Travis CI](https://img.shields.io/travis/com/mastereric/object_hash/master)](https://travis-ci.com/github/MasterEric/object_hash)
-[![RubyGems](https://)](https://img.shields.io/gem/dv/object_hash/stable)
-[![Coverage Status](https://img.shields.io/coveralls/github/MasterEric/object_hash/master)](https://coveralls.io/github/MasterEric/object_hash)
+[![Travis CI](https://img.shields.io/travis/com/mastereric/object_hash_rb/master)](https://travis-ci.com/github/MasterEric/object_hash_rb)
+[![RubyGems](https://)](https://img.shields.io/gem/dv/object_hash_rb/stable)
+[![Coverage Status](https://img.shields.io/coveralls/github/MasterEric/object_hash_rb/master)](https://coveralls.io/github/MasterEric/object_hash_rb)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'object_hash'
+gem 'object_hash_rb'
 ```
 
 And then execute:
@@ -24,13 +24,14 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install object_hash
+    $ gem install object_hash_rb
 
 ## Usage
 
-WARNING: For Ruby `object_hash` values to be compatible with NodeJS `object-hash` values, you must disable 
+WARNING: For `object_hash_rb` values to be compatible with NodeJS `object-hash` values, you must disable the `respectTypes` option when hashing in JavaScript.
 
 ```ruby
+require "object_hash_rb"
 
 # Encode and hash the given input.
 ObjectHash.hash("Hello World")
@@ -83,6 +84,17 @@ ObjectHash.hash({ c: 3, a: 1, b: 2 }, unordered_objects: false)
 
 ```
 
+## Comparisons
+
+How does this compare with other libraries?
+
+- JS: [puleos/object-hash](https://github.com/puleos/object-hash): `object_hash_rb` is intended to be a compatible port of puelos/object-hash, which has wide adoption. As long as `respectType` is set to false, the JavaScript version will produce identical hashes to this library.
+- Ruby: [benlaurie/objecthash](https://github.com/benlaurie/objecthash/tree/master/ruby): `object_hash_rb` competes with, and has the following improvements over, `benlaurie/objecthash`:
+  - Direct compatibility with the JavaScript library.
+  - Recent maintenance (at time of writing, `benlaurie/objecthash` has not received any fixes in 3 years, for any of its libraries).
+  - Higher performance (`benlaurie/objecthash` cryptographically hashes each value individually, whereas `object_hash_rb` produces a single encoding of the object before hashing.)
+  - Support for circular references (`benlaurie/objecthash` has no handler to prevent issues with circular references)
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
@@ -91,7 +103,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/MasterEric/object_hash. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/MasterEric/object_hash/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/MasterEric/object_hash_rb. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/MasterEric/object_hash_rb/blob/master/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -99,4 +111,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the ObjectHash project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/MasterEric/object_hash/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the ObjectHash project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/MasterEric/object_hash_rb/blob/master/CODE_OF_CONDUCT.md).

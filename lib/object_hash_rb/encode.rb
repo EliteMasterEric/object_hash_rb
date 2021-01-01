@@ -67,6 +67,10 @@ module Encode
     end
 
     def encode_Float(input)
+      return "number:NaN" if input.nan?
+
+      return input.positive? ? "number:Infinity" : "number:-Infinity" if input.infinite?
+
       encode_Number(input)
     end
 
