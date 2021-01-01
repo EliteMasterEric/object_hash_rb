@@ -10,24 +10,7 @@ require "time"
 module Encode
   # Used by the Encoder with js_prototypes enabled,
   # to emulate a key with a value of undefined.
-  class Undefined
-    def to_s
-      "undefined"
-    end
-  end
-
-  # Used to tell the encoder to output this directly.
-  # If we simply specified a string it would be prefixed by "string:"
-  # Only use internally.
-  class RawValue
-    def initialize(input)
-      @value = input
-    end
-
-    def to_s
-      @value
-    end
-  end
+  class Undefined; end
 
   # Performs encoding while managing state.
   class Encoder
@@ -121,10 +104,6 @@ module Encode
 
     def encode_Undefined(_input)
       "Undefined"
-    end
-
-    def encode_RawValue(input)
-      input.to_s
     end
 
     # End encoding methods.

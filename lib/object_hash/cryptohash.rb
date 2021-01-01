@@ -3,8 +3,6 @@
 # Universal hashing libraries.
 # MD5, SHA1, SHA2, SHA256, SHA384, SHA512, RMD160
 require "digest"
-# ADLER32, CRC32
-require "zlib"
 
 require_relative "error"
 
@@ -47,14 +45,6 @@ module CryptoHash
     rmd160: lambda do |input|
       # Return the RMD160 hash.
       Digest::RMD160.hexdigest(input).upcase
-    end,
-    adler32: lambda do |input|
-      # Return the ADLER32 hash.
-      Zlib.adler32(input).upcase
-    end,
-    crc32: lambda do |input|
-      # Return the CRC32 hash.
-      Zlib.crc32(input).upcase
     end
   }.freeze
 
