@@ -6,8 +6,9 @@ The library aims to support hashing of objects such as circular object structure
 
 Built to generate cryptographic hashes which are compatible with [object-hash](https://github.com/puleos/object-hash) for NodeJS.
 
-[![Travis CI](https://secure.travis-ci.com/MasterEric/object_hash.png?branch=master)](https://img.shields.io/travis/com/mastereric/object_hash/master)
-[![Coverage Status](https://coveralls.io/repos/MasterEric/object_hash/badge.svg?branch=master&service=github)](https://img.shields.io/coveralls/github/MasterEric/object_hash/master)
+[![Travis CI](https://img.shields.io/travis/com/mastereric/object_hash/master)](https://travis-ci.com/github/MasterEric/object_hash)
+[![RubyGems](https://)](https://img.shields.io/gem/dv/object_hash/stable)
+[![Coverage Status](https://coveralls.io/github/MasterEric/object_hash)](https://img.shields.io/coveralls/github/MasterEric/object_hash/master)
 
 ## Installation
 
