@@ -8,7 +8,7 @@ Built to generate cryptographic hashes which are compatible with [object-hash](h
 
 [![Travis CI](https://img.shields.io/travis/com/mastereric/object_hash/master)](https://travis-ci.com/github/MasterEric/object_hash)
 [![RubyGems](https://)](https://img.shields.io/gem/dv/object_hash/stable)
-[![Coverage Status](https://coveralls.io/github/MasterEric/object_hash)](https://img.shields.io/coveralls/github/MasterEric/object_hash/master)
+[![Coverage Status](https://img.shields.io/coveralls/github/MasterEric/object_hash/master)](https://coveralls.io/github/MasterEric/object_hash)
 
 ## Installation
 
