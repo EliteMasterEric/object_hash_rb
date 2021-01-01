@@ -14,5 +14,7 @@
       "useBundler": true // enable reek via bundler
     }
   },
-  "ruby.format": "rubocop" // use rubocop for formatting
+  "ruby.format": "rubocop",
+  "inlineHasher.singleDefaultFormat": "%2",
+  "inlineHasher.showFormatInputBox": false // use rubocop for formatting
 }

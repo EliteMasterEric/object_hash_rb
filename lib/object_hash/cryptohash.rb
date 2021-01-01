@@ -8,13 +8,14 @@ require "zlib"
 
 require_relative "error"
 
+# @INTERNAL: Please use ObjectHash.hash() instead.
 # Contains functions which cryptographically hash an input string,
 # using a given algorithm. Several common algorithms are implemented,
 # or you can provide your own Digest object.
 module CryptoHash
   # Algorithms which can cryptographically hash an input.
   ALGORITHMS = {
-    none: lambda do |input|
+    passthrough: lambda do |input|
       # Return the original input with no modification.
       # Useful for debugging and testing.
       input
@@ -59,6 +60,7 @@ module CryptoHash
 
   module_function
 
+  # @INTERNAL: Please use ObjectHash.hash() instead.
   # Call the appropriate algorithm on the input.
   # @param input A string to hash.
   # @param algorithm Either a string for an algorithm to use, or a Digest to perform the hash.

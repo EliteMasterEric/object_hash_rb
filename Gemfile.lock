@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    object_hash (0.1.0)
+    object_hash (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -43,6 +43,7 @@ GEM
     unicode-display_width (1.7.0)
 
 PLATFORMS
+  ruby
   x64-mingw32
 
 DEPENDENCIES
