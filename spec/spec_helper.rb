@@ -4,7 +4,7 @@
 require "coveralls"
 Coveralls.wear!
 
-require "object_hash"
+require "object_hash_rb"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

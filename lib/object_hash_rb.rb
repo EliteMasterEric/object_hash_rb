@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "object_hash/version"
+require_relative "object_hash_rb/version"
 
-require_relative "object_hash/encode"
-require_relative "object_hash/cryptohash"
+require_relative "object_hash_rb/encode"
+require_relative "object_hash_rb/cryptohash"
 
 # Contains functions which encode the input into a standardized format,
 # then cryptographically hash it.
