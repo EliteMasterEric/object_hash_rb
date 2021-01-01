@@ -24,13 +24,13 @@ RSpec.describe ObjectHash do
 
     it "hashes with 'none'" do
       # Simple strings.
-      expect(ObjectHash::CryptoHash.perform_cryptohash("Hello World", "none"))
+      expect(ObjectHash::CryptoHash.perform_cryptohash("Hello World", "passthrough"))
         .to eq "Hello World"
-      expect(ObjectHash::CryptoHash.perform_cryptohash("Testing", "none"))
+      expect(ObjectHash::CryptoHash.perform_cryptohash("Testing", "passthrough"))
         .to eq "Testing"
 
       # Complex strings.
-      expect(ObjectHash::CryptoHash.perform_cryptohash("~9~N45u7k`25YfN", "none"))
+      expect(ObjectHash::CryptoHash.perform_cryptohash("~9~N45u7k`25YfN", "passthrough"))
         .to eq "~9~N45u7k`25YfN"
     end
 
@@ -205,7 +205,7 @@ RSpec.describe ObjectHash do
 
     it "encodes dates" do
       # Can encode Times.
-      expect(encode(Time.new(2008, 6, 21, 13, 30, 0, "Z")))
+      expect(encode(Time.new(2008, 6, 21, 13, 30, 0)))
         .to eq "date:2008-06-21T13:30:00.000Z"
 
       # Can encode DateTimes.
@@ -350,7 +350,7 @@ RSpec.describe ObjectHash do
 
     it "hashes dates" do
       # Can encode Times.
-      expect(ObjectHash.hash(Time.new(2008, 6, 21, 13, 30, 0, "Z")))
+      expect(ObjectHash.hash(Time.new(2008, 6, 21, 13, 30, 0)))
         .to eq "A314B73DA2FCF9428C117A1D7E1E61082D4DC9B9"
 
       # Can encode DateTimes.
