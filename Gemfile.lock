@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    object_hash_rb (0.1.2)
+    object_hash_rb (0.1.3)
 
 GEM
   remote: https://rubygems.org/
