@@ -1,6 +1,7 @@
 AllCops:
   TargetRubyVersion: 2.4
   NewCops: disable
+  SuggestExtensions: false
 
 Layout/EndOfLine:
   EnforcedStyle: lf

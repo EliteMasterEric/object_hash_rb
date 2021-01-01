@@ -82,6 +82,33 @@ RSpec.describe ObjectHash do
         .to eq "F1EA688AC812EBDF4EB8E78A29CC01AABE5BFF0F9205A1847C81A24223FA3849"
     end
 
+    it "hashes with 'sha384'" do
+      # Simple strings.
+      expect(ObjectHash::CryptoHash.perform_cryptohash("Hello World", "sha384"))
+        .to eq "99514329186B2F6AE4A1329E7EE6C610A729636335174AC6B740F9028396FCC803D0E93863A7C3D90F86BEEE782F4F3F"
+      expect(ObjectHash::CryptoHash.perform_cryptohash("Testing", "sha384"))
+        .to eq "2CA8B7B913D970A884FDB61DAF74F6B4F868BC2AC20EA7583009259F382B14A04BE97EA64BA0BAB703CA7EA75A932BD5"
+
+      # Complex strings.
+      expect(ObjectHash::CryptoHash.perform_cryptohash("~9~N45u7k`25YfN", "sha384"))
+        .to eq "C80551868A1F067E6D93FCACCC1B1B12A204462CEAA41F5ACD1776562A4C285D9D33B4B0EFC21790F75D182C168918EA"
+    end
+
+    it "hashes with 'sha512'" do
+      # Simple strings.
+      expect(ObjectHash::CryptoHash.perform_cryptohash("Hello World", "sha512"))
+        .to eq "2C74FD17EDAFD80E8447B0D46741EE243B7EB74DD2149A0AB1B9246FB30382F2"\
+          "7E853D8585719E0E67CBDA0DAA8F51671064615D645AE27ACB15BFB1447F459B"
+      expect(ObjectHash::CryptoHash.perform_cryptohash("Testing", "sha512"))
+        .to eq "64F02697CCD1C0AE741D9E226F957127DA7A614D6A18F55F9F2726D2027FAAC1"\
+          "E95E619DAC5417EB4898FD6A9FB8AEB9CDD005E913C80E57454CAE4B6FC6E5D6"
+
+      # Complex strings.
+      expect(ObjectHash::CryptoHash.perform_cryptohash("~9~N45u7k`25YfN", "sha512"))
+        .to eq "C3DBFDBE21130D32CC7CC163CF2BB246DBDFE6D3BD29B78537280BA7E8FBBA0DD76A"\
+          "9D42BA09987E97C49F5EE875F5BB7F8A36D230AFC371DB8181447AD0F358"
+    end
+
     it "hashes with 'rmd160'" do
       # Simple strings.
       expect(ObjectHash::CryptoHash.perform_cryptohash("Hello World", "rmd160"))
