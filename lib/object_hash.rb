@@ -8,8 +8,10 @@ require_relative "object_hash/cryptohash"
 # Contains functions which encode the input into a standardized format,
 # then cryptographically hash it.
 module ObjectHash
+  # rubocop:disable Lint/SelfAssignment
   Encode = Encode
   CryptoHash = CryptoHash
+  # rubocop:enable Lint/SelfAssignment
 
   module_function
 

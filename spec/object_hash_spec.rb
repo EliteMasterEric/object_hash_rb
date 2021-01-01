@@ -244,11 +244,13 @@ RSpec.describe ObjectHash do
     it "has option: replacer" do
       # @replacer
       # Create a test class, which currently has no encoder.
+      # rubocop:disable Lint/ConstantDefinitionInBlock
       class TestStuff
         def generate_name
           "foobar"
         end
       end
+      # rubocop:enable Lint/ConstantDefinitionInBlock
 
       # Expect it to fail without a custom replacer.
       expect { ObjectHash::Encode::Encoder.new.perform_encode({ "a" => TestStuff.new }) }
@@ -394,11 +396,13 @@ RSpec.describe ObjectHash do
     it "has option: replacer" do
       # @replacer
       # Create a test class, which currently has no encoder.
+      # rubocop:disable Lint/ConstantDefinitionInBlock
       class TestStuff
         def generate_name
           "foobar"
         end
       end
+      # rubocop:enable Lint/ConstantDefinitionInBlock
 
       # Expect it to fail without a custom replacer.
       expect { ObjectHash.hash({ "a" => TestStuff.new }) }

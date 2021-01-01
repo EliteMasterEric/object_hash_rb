@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+# Hook into the application to provide code coverage.
+require "coveralls"
+Coveralls.wear!
+
 require "object_hash"
 
 RSpec.configure do |config|
